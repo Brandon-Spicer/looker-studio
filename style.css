@@ -1,0 +1,9 @@
+a {
+
+	padding: 10px;
+	margin: 2px;
+	color: white;
+	background-color: red;
+	border-radius: 5px;
+	display: inline-block;
+}
