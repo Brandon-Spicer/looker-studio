@@ -4,9 +4,37 @@
   </head>
   <body>
     <div class="bar">
-      <a href="index.html">sample</a>
-      <a href="live.html">live</a>
+      <button onclick="onClick(this.innerHTML)">Teenlink</button>
+      <button onclick="onClick(this.innerHTML)">MAP</button>
+      <button onclick="onClick(this.innerHTML)">ParentTrust</button>
+      <button onclick="onClick(this.innerHTML)">MD211</button>
+      <button onclick="onClick(this.innerHTML)">Helpline</button>
+      <button onclick="onClick(this.innerHTML)">WA211</button>
+      <button onclick="onClick(this.innerHTML)">AUW211</button>
+      <button onclick="onClick(this.innerHTML)">NE211</button>
+      <button onclick="onClick(this.innerHTML)">WRHL</button>
     </div>
-    <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/a931c855-1796-437a-b250-7222c98c99b2/page/6zXD" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe id="dashboard" width="900" height="700" src="https://lookerstudio.google.com/embed/reporting/a931c855-1796-437a-b250-7222c98c99b2/page/6zXD" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <script type="text/javascript">
+      const links = {
+        Teenlink: "ff07c366-f0c3-4314-81d7-c8a6502485f5",
+        MAP: "ae8e9202-0dfe-4858-9e49-91238447cc1c",
+        ParentTrust: "eee7ac58-89a6-4eec-a748-d2c34d059cf0",
+        MD211: "7b0920bd-8f55-4a21-808f-3a87223dcdf9",
+        Helpline: "1d336ccd-2988-46ca-bf40-0b341ff17400",
+        WA211: "5cfe707b-5cf1-4a04-8a16-1c8ae5d9e256",
+        AUW211: "dbf8b989-015e-452e-8b8a-9571ec6ac73f",
+        NE211: "2f4e9a63-78b8-42cc-8546-10b405f31675",
+        WRHL: "246e82db-f5aa-4f39-a493-43970588e103",
+      };
+      console.log("script");
+
+      function onClick(name) {
+        document.getElementById(
+          "dashboard"
+        ).src = `https://lookerstudio.google.com/embed/reporting/${links[name]}/page/6zXD`;
+        console.log(name);
+      }
+    </script>
   </body>
 </html>
